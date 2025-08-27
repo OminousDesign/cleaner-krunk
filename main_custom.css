@@ -1,0 +1,339 @@
+/* Chasing Kou - By Omi (modified from an original collaboration between 0minou5 & rex_kr) */
+
+/*extras*/
+@import url(https://envyxyz.github.io/removal/removal.css);
+
+
+/* root to change colors (idk why i didnt use this more) */
+:root {
+	--div-grey: #00000000;
+	--div-black: rgba(0, 0, 0, 0.384);
+}
+
+* {
+	font-family: 'GameFont1';
+}
+
+@font-face {
+    font-family: 'GameFont1';
+    src: url('https://raw.githubusercontent.com/OminousDesign/cask/main/CaskaydiaCoveNerdFont-SemiBold.ttf')
+}
+
+/* Change the image from here <3 */
+#bottomLeftClassImg ,#menuMiniProfilePic,#profilePicM {
+  content: url(https://cdn.discordapp.com/attachments/970762844519944272/1392450498988081162/raw.png?ex=686f9415&is=686e4295&hm=c55c73cd3152a6938744abd4b98176857589ef21dd5344b2dde727ae9d4e8c95)
+}
+
+#bottomLeftClassImg{
+    border-radius: 16px 8px !important;
+}
+
+/* Change your name from here */
+
+#bottomLeftHealth {
+    visibility: hidden;
+}
+
+#bottomLeftHealth::before{
+	visibility: visible;
+	position: relative;
+	font-size: 20px;
+    left: 30%;
+	content: "chasing kou";
+    white-space: nowrap;
+}
+
+/* Change the match info from here */
+#matchInfo,
+#matchInfoHolder{
+	visibility: hidden;
+}
+
+#matchInfo::after{
+	visibility: visible;
+	position: fixed;
+	top: 6rem;
+    color: rgb(189, 216, 255);
+	content: "desiderium"
+}
+
+
+
+#timerInner.topLeftOld,
+#leaderContainer,
+.greyInner,
+#bottomLeftHealthBar,
+.greyInlineInner,
+.greyInlineInnerMid,
+.weapItem,
+.weapItemInner,
+.weapStreakInner,
+.centerLeaderContainerInner,
+#bottomLeftTeamName
+{
+    background-color: transparent;
+} 
+
+#homeStoreAd,
+#policeButton,
+.weapStreakHolder,
+#timerIcon,
+#gameNameHolder,
+.weapSkin,
+.menuItem .menuItemTitle,
+#ammoIcon,
+#bottomLeftTeamName,
+.greyInlineInner,
+#mapInfoHld{
+    display: none !important;
+}
+
+/*MAIN MENU*/
+.menBtnIcn {
+    filter: grayscale(100%) brightness(300%);
+}
+
+#menuBtnQuickMatch, #menuBtnRanked, #menuBtnHost, #menuBtnBrowser, #inviteButton, #menuBtnJoin, #customizeButton{
+	border: solid white 3px !important;
+	border-radius: 24px 8px;
+}
+
+
+/*WEAPON*/
+
+#ammoHolder {
+    background-color: rgb(20 20 20 / 0%);
+   
+}
+
+#ammoMax {
+    color: rgb(255 255 255);
+}
+
+.weapItem {
+    color: #fff;
+    background-color: rgb(20 20 20 / 0%);
+}
+
+.weapItem[style*="0.5"] {
+    display: none;
+}
+
+.weapItemInner {
+    color: rgba(255,255,255,.7);
+    background-color: rgb(108 108 108 / 0%);
+}
+
+
+.weapSkin {
+    background-color: rgb(20 20 20 / 0%);
+    color: #ffffffcf;
+    display: none;
+}
+
+.weapKey {
+   display:none;
+}
+.weapStreakHolder {
+    background-color: rgb(20 20 20 / 0%);
+    color: #fff;
+}
+
+.weapStreakInner {
+    color: rgb(255 255 255);
+    background-color: rgb(108 108 108 / 0%);
+
+}
+
+.killStreakItem {
+    background-color: rgb(20 20 20 / 0%);
+}
+#ammoIcon {
+    display: none;
+}
+
+#bottomLeftChallIcon {
+    display: none;
+}
+#ammoVal {
+    text-shadow: none;
+}
+
+#ammoVal:after {
+    content: " ";
+}
+
+#bottomLeftTeamHolder {
+    display: none;
+}
+#matchInfo,
+#matchInfo.topLeftOld,
+#matchInfoHolder
+{
+    display: none;
+}
+
+#weapHolder {
+	position: absolute;
+	z-index: 1;
+	right: 15px;
+	bottom: 90px;
+	row-gap: 1px;
+}
+.weapItem {
+
+	border-radius: 4px;
+	
+}
+.weapItemInner {
+
+	margin: 0px;
+	padding: 0px 0px;
+	display: inline-block;
+}
+
+/*icons and health*/
+
+.statIcon {
+	font-size: 24px;
+	padding-left: 3px;
+	padding-right: 5px
+}
+
+.statIcon .material-icons {
+    vertical-align: bottom;
+    line-height: 1;
+    font-size: 42px!important;
+}
+
+#killsIcon, #deathsIcon, #streakIcon, #kdIcon {
+	width: 36px;
+	height: 36px
+}
+
+#chatList {
+        background-color: transparent;
+}
+
+#chatList::-webkit-scrollbar {
+   display:none;
+}
+
+#chatInput {
+  background-color: transparent;
+    border: none;
+}
+
+#chatInputHolder {
+  background-color: transparent;
+}
+
+#streamContainer,#PC7WaterMark2,.terms,#termsInfo {
+  display: none !important;
+}
+
+#timerInner.topLeftOld {
+	padding: 5px 10px;
+    background: var(var(--div-black));
+}
+
+
+.nHealthBarSeg {
+    background-color: transparent;
+    width: -webkit-fill-available;
+    height: 35px;
+    margin-right: -6px;
+}
+
+.nHealthBarSeg:first-child .nHpBSeg {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.nHealthBarSeg:last-child .nHpBSeg {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.nHpBSeg {
+    width: 100%;
+    border-radius: 0px
+}
+
+
+#bottomLeftTeamName {
+    overflow: visible;
+}
+
+#bottomLeftTeamType {
+    display: none
+}
+
+
+#bottomLeftPlayer {
+    grid-template-areas: 
+        "profile healthval team"
+        "profile healthbar healthbar";
+    grid-template-columns: auto max-content 250px;
+    column-gap: 10px;
+    background-color: transparent
+}
+
+#bottomLeftPlayerRight {
+    grid-area: healthval;
+    grid-template-columns: 20px auto;
+    justify-content: flex-start;
+    column-gap: 5px;
+    align-content: unset;
+	direction: rtl
+}
+
+#bottomLeftPlayerLeft {
+	grid-area: profile;
+	height: 100px;
+	width: 100px
+}
+#bottomLeftPlayerLeft, #bottomLeftPlayerRight
+	{background-color: #ffffff00}
+
+#bottomLeftClassImg {
+	border-radius: 4px
+}
+
+#bottomLeftPlayerMid {
+    display: contents;
+    grid-area: healthbar;
+}
+
+#bottomLeftHealthBar {
+    grid-area: healthbar;
+    column-gap: 5px;
+	padding: unset;
+	margin-left: -5px;
+    /* grid-template-columns: repeat(7, auto); */
+}
+
+#bottomLeftTeamHolder {display: contents}
+
+#bottomLeftTeamName {
+    display: flex;
+    grid-area: team;
+    padding: 1.5px 10px;
+    align-items: center;
+    height: 35px;
+    margin-top: 2.5px;
+}
+
+#bottomLeftTeamName {
+    grid-area: team;
+}
+
+#bottomLeftChallIcon {
+    width: 22.5px;
+    height: 22.5px;
+}
+
+#bottomLeftTeamName,#bottomLeftPlayerLeft, #bottomLeftHealthBar, #bottomLeftPlayerRight {
+    border-radius: 4px
+}
+
